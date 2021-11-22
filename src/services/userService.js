@@ -1,8 +1,17 @@
+import { users } from "../data/users.js"
+
 export default class UserService {
 
     constructor(loggerService){
-        this.users = [],
+        this.employee = [],
+        this.customer = [],
         this.loggerService = loggerService
+    }
+
+    load() {
+        for (const user of users) {
+            console.log(user)
+        }
     }
 
     add(user){
